@@ -76,3 +76,7 @@ crashlytics-build.properties
 
 #TextMesh Pro Assets
 /[Aa]ssets/TextMesh Pro/
+
+#Blender backup file
+**/*.blend1
+**/*.blend1.meta
