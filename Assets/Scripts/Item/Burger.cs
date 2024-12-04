@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Burger : Item{
+public class Burger : Bakable{
     List<Item> ingredients;
     [SerializeField]
     private GameObject UpperBun;
 
     void Start(){
         ingredients = new List<Item>();
+    }
+
+    public override void Bake()
+    {
+        base.Bake();
     }
 
     public void AddIngredient(Item ingredient){
