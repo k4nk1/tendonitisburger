@@ -47,8 +47,8 @@ public class Fryable : Item, IFryable
         //set progress of progressBar of parent fryProgress
     }
 
-    public override string ToString()
+    public override ItemInfo ToItemInfo()
     {
-        return base.ToString() + "(" + FryProgress.ToString() + ")";
+        return base.ToItemInfo().AddInfo(state: fryProgress.ToString());
     }
 }

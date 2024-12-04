@@ -18,8 +18,8 @@ public class Item : MonoBehaviour
         parent = parentObject as Block;
     }
 
-    public override string ToString()
+    public virtual ItemInfo ToItemInfo()
     {
-        return itemName;
+        return new ItemInfo(itemName);
     }
 }

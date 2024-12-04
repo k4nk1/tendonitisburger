@@ -19,8 +19,12 @@ public class Burger : Item{
         height += ingredient.height;
     }
 
-    public override string ToString()
+    public override ItemInfo ToItemInfo()
     {
-        return base.ToString() + "(" + string.Join(", ", ingredients) + ")";
+        List<ItemInfo> itemInfos = new List<ItemInfo>();
+        foreach(Item item in ingredients){
+            itemInfos.Add(item.ToItemInfo());
+        }
+        return base.ToItemInfo().AddInfo(innerItems: itemInfos);
     }
 }

@@ -34,4 +34,9 @@ public class Drink : Item{
         surface.transform.localPosition = Vector3.up * height * pourProgress / pouringDurations[size];
         return true;
     }
+
+    public override ItemInfo ToItemInfo()
+    {
+        return base.ToItemInfo().AddInfo(size: size, state: type.ToString());
+    }
 }

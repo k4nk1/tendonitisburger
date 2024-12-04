@@ -42,9 +42,12 @@ public class Set : Item{
         }
     }
 
-    public override string ToString()
+    public override ItemInfo ToItemInfo()
     {
-        if(noItems == 0) return "Empty";
-        return string.Join(", ", items);
+        List<ItemInfo> itemInfos = new List<ItemInfo>();
+        foreach(Item item in items){
+            itemInfos.Add(item.ToItemInfo());
+        }
+        return base.ToItemInfo().AddInfo(innerItems: itemInfos);
     }
 }

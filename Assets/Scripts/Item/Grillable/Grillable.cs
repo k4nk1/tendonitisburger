@@ -47,8 +47,8 @@ public class Grillable : Item, IGrillable
         //set progress of progressBar of parent grillProgress
     }
 
-    public override string ToString()
+    public override ItemInfo ToItemInfo()
     {
-        return base.ToString() + "[" + GrillProgress.ToString() + "]";
+        return base.ToItemInfo().AddInfo(state: grillProgress.ToString());
     }
 }
