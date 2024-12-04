@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d52ba104a822cee4ea36e02ccdb68516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Burger
   maxStack: 0
   height: 0.32
   UpperBun: {fileID: 8309782085250933588}

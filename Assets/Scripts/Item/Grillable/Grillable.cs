@@ -46,4 +46,9 @@ public class Grillable : Item, IGrillable
         grillProgress += Time.deltaTime;
         //set progress of progressBar of parent grillProgress
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + "[" + GrillProgress.ToString() + "]";
+    }
 }

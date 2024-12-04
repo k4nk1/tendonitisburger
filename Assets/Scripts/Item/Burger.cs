@@ -18,4 +18,9 @@ public class Burger : Item{
         UpperBun.transform.localPosition = Vector3.up * height;
         height += ingredient.height;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + "(" + string.Join(", ", ingredients) + ")";
+    }
 }

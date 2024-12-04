@@ -96,5 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdae49431b7ae74a81b2c848a3e7040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: Cheese
   maxStack: 0
   height: 0.02
