@@ -3,17 +3,23 @@ using UnityEngine;
 
 public class ServingTable : Block{
     [SerializeField]
-    private GameObject emptySet;
+    private Set set;
     public override Item Put(Item item)
     {
-        if(inventory == null){
-            inventory = Instantiate(emptySet, transform.position + Vector3.up * 2, Quaternion.identity).GetComponent<Item>();
-            ((Set)inventory).AddItem(item);
-        }else if(((Set)inventory).noItems <= 4){
-            ((Set)inventory).AddItem(item);
+        if(set.noItems < 4){
+            set.AddItem(item);
+            return null;
         }else{
             return item;
         }
-        return null;
+    }
+
+    public override Item Pick()
+    {
+        if(set.noItems == 0){
+            return null;
+        }else{
+            return set.PopItem();
+        }
     }
 }
