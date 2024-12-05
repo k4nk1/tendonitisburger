@@ -47,6 +47,6 @@ public class Grillable : Item, IGrillable
 
     public override ItemInfo ToItemInfo()
     {
-        return base.ToItemInfo().AddInfo(state: grillProgress.ToString());
+        return base.ToItemInfo().AddInfo(state: GrillProgress.ToString());
     }
 }

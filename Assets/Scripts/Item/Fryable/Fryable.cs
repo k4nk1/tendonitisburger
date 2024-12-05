@@ -47,6 +47,6 @@ public class Fryable : Item, IFryable
 
     public override ItemInfo ToItemInfo()
     {
-        return base.ToItemInfo().AddInfo(state: fryProgress.ToString());
+        return base.ToItemInfo().AddInfo(state: FryProgress.ToString());
     }
 }

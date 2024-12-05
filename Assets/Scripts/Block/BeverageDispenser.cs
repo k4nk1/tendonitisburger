@@ -1,5 +1,8 @@
 
+using UnityEngine;
+
 public class BeverageDispenser : Block{
+    [SerializeField]
     private BeverageType beverageType;
 
     void Update(){

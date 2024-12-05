@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ItemInfo
 {
@@ -18,17 +19,19 @@ public class ItemInfo
         if(size != null) this.size = size;
         if(type != null) this.type = type;
         if(state != null) this.state = state;
-        if(innerItems != null) this.innerItems = innerItems;
+        if(innerItems == null) this.innerItems = new List<ItemInfo>();
+        else this.innerItems = innerItems;
         return this;
     }
 
     public bool matches(ItemInfo another){
+        Debug.Log($"{name}, {size}, {type}, {state}, {string.Join(", ", innerItems)}");
+        Debug.Log($"{another.name}, {another.size}, {another.type}, {another.state}, {string.Join(", ", another.innerItems)}");
         return name == another.name && size == another.size && type == another.type && state == another.state && CompareLists(innerItems, another.innerItems);
     }
 
     private static bool CompareLists(List<ItemInfo> a, List<ItemInfo> b){
-        if((a == null || a.Count == 0) && (b == null || b.Count == 0)) return true;
-        if(a != null && b != null && a.Count != b.Count) return false;
+        if(a.Count != b.Count) return false;
         for(int i=0; i<a.Count; i++){
             if(!a[i].matches(b[i])) return false;
         }
@@ -41,7 +44,11 @@ public class ItemInfo
         if(size != null) r += $"<{size}>";
         if(type != null) r += $"({type})";
         if(state != null) r += $"{{{state}}}";
-        if(innerItems != null) r += $"[{string.Join(", ", innerItems)}]";
+        if(innerItems.Count != 0) r += $"[{string.Join(", ", innerItems)}]";
         return r;
+    }
+
+    public ItemInfo DeepCopy(){
+        return new ItemInfo(name: name, size: size, type: type, state: state, innerItems: innerItems == null ? null : new List<ItemInfo>(innerItems));
     }
 }

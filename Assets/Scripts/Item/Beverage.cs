@@ -31,7 +31,7 @@ public class Beverage : Item{
         if(type == BeverageType.Empty) type = pourType; 
         if(type != pourType || PourProgress == PourProgress.Full) return false;
         pourProgress += Time.deltaTime;
-        surface.transform.localPosition = Vector3.up * height * pourProgress / pouringDurations[size];
+        surface.transform.localPosition = Vector3.up * height * pourProgress / pouringDurations[size]; //0.54->0.66
         return true;
     }
 

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 public class Menus
 {
-    public static ItemInfo patty = new ItemInfo("Patty", state: "Grilled");
-    public static ItemInfo bun = new ItemInfo("Burger", state: "Baked");
-    public static ItemInfo hamburger = bun.AddInfo(innerItems: new List<ItemInfo>(){patty});
+    public static readonly ItemInfo patty = new ItemInfo("Patty", state: "Grilled");
+    public static readonly ItemInfo cheese = new ItemInfo("Cheese");
+    public static readonly ItemInfo bun = new ItemInfo("Burger", state: "Baked");
+    public static readonly ItemInfo hamburger = new ItemInfo("Burger", state: "Baked", innerItems: new List<ItemInfo>(){patty});
+    public static readonly ItemInfo cheeseBurger = new ItemInfo("Burger", state: "Baked", innerItems: new List<ItemInfo>(){patty, cheese});
+    public static readonly ItemInfo doubleCheeseBurger = new ItemInfo("Burger", state: "Baked", innerItems: new List<ItemInfo>(){patty, cheese, patty, cheese});
 }

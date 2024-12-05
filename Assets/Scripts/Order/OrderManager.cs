@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class OrderManager : MonoBehaviour
@@ -13,7 +12,10 @@ public class OrderManager : MonoBehaviour
     void Update(){
         if(Input.GetKeyDown(KeyCode.Space)){
             Order order = new Order();
-            if(Input.GetKey(KeyCode.B)) order.items.Add(new ItemInfo(name: "Burger", state: "Baked"));
+            if(Input.GetKey(KeyCode.B)) order.items.Add(Menus.bun);
+            if(Input.GetKey(KeyCode.H)) order.items.Add(Menus.hamburger);
+            if(Input.GetKey(KeyCode.C)) order.items.Add(Menus.cheeseBurger);
+            if(Input.GetKey(KeyCode.D)) order.items.Add(Menus.doubleCheeseBurger);
             orders.Add(order);
             LogOrders();
         }
