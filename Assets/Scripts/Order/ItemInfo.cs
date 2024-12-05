@@ -14,7 +14,7 @@ public class ItemInfo
     }
 
     public ItemInfo AddInfo(string name=null, Size? size=null, string type=null, string state=null, List<ItemInfo> innerItems=null){
-        if(name != "") this.name = name;
+        if(name != null) this.name = name;
         if(size != null) this.size = size;
         if(type != null) this.type = type;
         if(state != null) this.state = state;
@@ -27,11 +27,21 @@ public class ItemInfo
     }
 
     private static bool CompareLists(List<ItemInfo> a, List<ItemInfo> b){
-        if(a == null && b == null) return true;
+        if((a == null || a.Count == 0) && (b == null || b.Count == 0)) return true;
         if(a != null && b != null && a.Count != b.Count) return false;
         for(int i=0; i<a.Count; i++){
             if(!a[i].matches(b[i])) return false;
         }
         return true;
+    }
+
+    public override string ToString()
+    {
+        string r = name;
+        if(size != null) r += $"<{size}>";
+        if(type != null) r += $"({type})";
+        if(state != null) r += $"{{{state}}}";
+        if(innerItems != null) r += $"[{string.Join(", ", innerItems)}]";
+        return r;
     }
 }

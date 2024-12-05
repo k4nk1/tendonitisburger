@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public enum BakeProgress{
@@ -26,8 +27,7 @@ public class Bakable : Item, IBakable
 
     public virtual void Bake(){
         BakeProgress = BakeProgress.Baked;
-        bakableInfo.rawObject.SetActive(false);
-        bakableInfo.bakedObject.SetActive(true);
+        SwitchAppearance(bakableInfo.rawObject, bakableInfo.bakedObject);
     }
 
     public override ItemInfo ToItemInfo()

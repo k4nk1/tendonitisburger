@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587159795257802150}
-  - component: {fileID: -2863866142488113425}
+  - component: {fileID: -5936500151771728321}
   m_Layer: 0
   m_Name: Patty
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 2710342914406220856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2863866142488113425
+--- !u!114 &-5936500151771728321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,12 +44,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 779246022444712366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2847fc6eaa7e3654d80f9929986728cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 90cac79cdbedc9043a404178e050da07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Patty
   maxStack: 0
-  height: 0.32
+  height: 0.2
   grillableInfo:
     min: 5
     max: 10

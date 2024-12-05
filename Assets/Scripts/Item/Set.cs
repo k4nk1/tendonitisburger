@@ -19,6 +19,13 @@ public class Set : Item{
         return item;
     }
 
+    public void ClearItems(){
+        foreach(Item item in items){
+            Destroy(item.gameObject);
+        }
+        items.Clear();
+    }
+
     private void SortItems(){
         switch(noItems){
             case 1:

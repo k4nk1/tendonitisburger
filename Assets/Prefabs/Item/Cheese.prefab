@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6959202471193281433}
   - component: {fileID: 6327417549345084974}
   - component: {fileID: 7994879022423552400}
-  - component: {fileID: -1104617778363821195}
+  - component: {fileID: -9151671680738384397}
   m_Layer: 0
   m_Name: Cheese
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-1104617778363821195
+--- !u!114 &-9151671680738384397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2250953826836542296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfdae49431b7ae74a81b2c848a3e7040, type: 3}
+  m_Script: {fileID: 11500000, guid: cfe28144945bd3d498c2da20b1d9b7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cheese

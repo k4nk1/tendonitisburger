@@ -11,7 +11,7 @@ public class Block : MonoBehaviour
             item.SetParent(this);
             item.transform.localPosition = Vector3.up * 2;
             return null;
-        }else if(inventory is Burger){
+        }else if(inventory is Burger && item is IIngredient){
             ((Burger)inventory).AddIngredient(item);
             return null;
         }else{

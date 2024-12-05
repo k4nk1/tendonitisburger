@@ -331,7 +331,12 @@ MonoBehaviour:
   itemName: Burger
   maxStack: 0
   height: 0.32
-  UpperBun: {fileID: 8309782085250933588}
+  bakableInfo:
+    rawObject: {fileID: 9027168144979741602}
+    bakedObject: {fileID: 5318523770784215053}
+  BakeProgress: 0
+  RawUpperBun: {fileID: 8309782085250933588}
+  BakedUpperBun: {fileID: 1167495513062726888}
 --- !u!1 &8309782085250933588
 GameObject:
   m_ObjectHideFlags: 0

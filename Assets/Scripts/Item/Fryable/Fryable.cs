@@ -25,7 +25,7 @@ public interface IFryable{
 public class Fryable : Item, IFryable
 {
     [SerializeField]
-    private FryableInfo fryableInfo;
+    protected FryableInfo fryableInfo;
     public FryProgress FryProgress{
         get{
             if(fryProgress < fryableInfo.min) return FryProgress.Raw;
@@ -37,11 +37,9 @@ public class Fryable : Item, IFryable
 
     public void Fry(){
         if(FryProgress == FryProgress.Raw && fryProgress + Time.deltaTime > fryableInfo.min){
-            fryableInfo.rawObject.SetActive(false);
-            fryableInfo.friedObject.SetActive(true);
+            SwitchAppearance(fryableInfo.rawObject, fryableInfo.friedObject);
         }else if(FryProgress == FryProgress.Fried && fryProgress + Time.deltaTime > fryableInfo.max){
-            fryableInfo.friedObject.SetActive(false);
-            fryableInfo.burnedObject.SetActive(true);
+            SwitchAppearance(fryableInfo.friedObject, fryableInfo.burnedObject);
         }
         fryProgress += Time.deltaTime;
         //set progress of progressBar of parent fryProgress

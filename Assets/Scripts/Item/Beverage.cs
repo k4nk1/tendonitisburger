@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DrinkType{
-    Empty
+public enum BeverageType{
+    Empty, Cola
 }
 
 public enum PourProgress{
@@ -11,12 +11,12 @@ public enum PourProgress{
     Full
 }
 
-public class Drink : Item{
+public class Beverage : Item{
     [SerializeField]
     private Size size;
     [SerializeField]
     private GameObject surface;
-    private DrinkType type = DrinkType.Empty;
+    private BeverageType type = BeverageType.Empty;
     private static Dictionary<Size, float> pouringDurations = new Dictionary<Size, float>{{Size.S, 4}, {Size.M, 6}, {Size.L, 8}};
     private PourProgress PourProgress{ 
         get{
@@ -27,8 +27,8 @@ public class Drink : Item{
     }
     private float pourProgress;
 
-    public bool Pour(DrinkType pourType){
-        if(type == DrinkType.Empty) type = pourType; 
+    public bool Pour(BeverageType pourType){
+        if(type == BeverageType.Empty) type = pourType; 
         if(type != pourType || PourProgress == PourProgress.Full) return false;
         pourProgress += Time.deltaTime;
         surface.transform.localPosition = Vector3.up * height * pourProgress / pouringDurations[size];
