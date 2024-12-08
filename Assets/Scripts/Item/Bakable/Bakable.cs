@@ -27,7 +27,7 @@ public class Bakable : Item, IBakable
 
     public virtual void Bake(){
         BakeProgress = BakeProgress.Baked;
-        SwitchAppearance(bakableInfo.rawObject, bakableInfo.bakedObject);
+        ChangeBody(bakableInfo.bakedObject);
     }
 
     public override ItemInfo ToItemInfo()

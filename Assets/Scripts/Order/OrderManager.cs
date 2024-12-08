@@ -16,6 +16,8 @@ public class OrderManager : MonoBehaviour
             if(Input.GetKey(KeyCode.H)) order.items.Add(Menus.hamburger);
             if(Input.GetKey(KeyCode.C)) order.items.Add(Menus.cheeseBurger);
             if(Input.GetKey(KeyCode.D)) order.items.Add(Menus.doubleCheeseBurger);
+            if(Input.GetKey(KeyCode.F)) order.items.Add(Menus.fries);
+            if(Input.GetKey(KeyCode.L)) order.items.Add(Menus.cola);
             orders.Add(order);
             LogOrders();
         }

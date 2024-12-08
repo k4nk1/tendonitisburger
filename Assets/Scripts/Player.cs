@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -19,6 +20,9 @@ public class Player : MonoBehaviour
                     if(inventory == null) return;
                     inventory.SetParent(this);
                     inventory.transform.localPosition = Vector3.zero;
+                }else if(inventory is Fries && ((Fries)inventory).size != Size.L && block is Storage && ((Storage)block).type is Fries){
+                    if(((Fries)inventory).size == Size.S) ((Fries)inventory).size = Size.M;
+                    else ((Fries)inventory).size = Size.L;
                 }else{
                     inventory = block.Put(inventory);
                 }

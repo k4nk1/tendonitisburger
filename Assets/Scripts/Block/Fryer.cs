@@ -5,9 +5,9 @@ public class Fryer : Block
     public override Item Put(Item item)
     {
         if(item is Fryable){
-            base.Put(item);
+            Item r = base.Put(item);
             inventory.transform.localPosition = Vector3.up * 1.7f;
-            return null;
+            return r;
         }
         else return item;
     }

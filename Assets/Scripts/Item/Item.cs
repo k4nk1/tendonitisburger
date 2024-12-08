@@ -12,7 +12,13 @@ public class Item : MonoBehaviour
     public string itemName;
     public int maxStack;
     public float height;
+    protected GameObject body;
     protected Block parent;
+
+    void Start(){
+        body = transform.Find("Body").gameObject;
+    }
+
     public virtual void SetParent(MonoBehaviour parentObject){
         transform.parent = parentObject.transform;
         parent = parentObject as Block;
@@ -23,8 +29,9 @@ public class Item : MonoBehaviour
         return new ItemInfo(name: itemName);
     }
 
-    public void SwitchAppearance(GameObject from, GameObject to){
-        from.SetActive(false);
-        to.SetActive(true);
+    public void ChangeBody(GameObject newBody){
+        Destroy(body);
+        body = Instantiate(newBody, this.transform);
+        body.name = "Body";
     }
 }

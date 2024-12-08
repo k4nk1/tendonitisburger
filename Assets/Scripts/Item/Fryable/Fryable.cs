@@ -37,9 +37,9 @@ public class Fryable : Item, IFryable
 
     public void Fry(){
         if(FryProgress == FryProgress.Raw && fryProgress + Time.deltaTime > fryableInfo.min){
-            SwitchAppearance(fryableInfo.rawObject, fryableInfo.friedObject);
+            ChangeBody(fryableInfo.friedObject);
         }else if(FryProgress == FryProgress.Fried && fryProgress + Time.deltaTime > fryableInfo.max){
-            SwitchAppearance(fryableInfo.friedObject, fryableInfo.burnedObject);
+            ChangeBody(fryableInfo.burnedObject);
         }
         fryProgress += Time.deltaTime;
         //set progress of progressBar of parent fryProgress

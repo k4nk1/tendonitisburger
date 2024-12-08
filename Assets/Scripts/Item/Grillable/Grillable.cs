@@ -37,9 +37,9 @@ public class Grillable : Item, IGrillable
 
     public void Grill(){
         if(GrillProgress == GrillProgress.Raw && grillProgress + Time.deltaTime > grillableInfo.min){
-            SwitchAppearance(grillableInfo.rawObject, grillableInfo.grilledObject);
+            ChangeBody(grillableInfo.grilledObject);
         }else if(GrillProgress == GrillProgress.Grilled && grillProgress + Time.deltaTime > grillableInfo.max){
-            SwitchAppearance(grillableInfo.grilledObject, grillableInfo.burnedObject);
+            ChangeBody(grillableInfo.burnedObject);
         }
         grillProgress += Time.deltaTime;
         //set progress of progressBar of parent grillProgress
