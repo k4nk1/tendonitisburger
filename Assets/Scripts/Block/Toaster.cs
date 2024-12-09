@@ -23,7 +23,7 @@ public class Toaster : Block
     }
 
     private bool CanPut(){ return items.Count == 0 || items[items.Count-1].transform.localPosition.z > 0.75f; }
-    private bool CanPick() { return items.Count > 0 && items[0].transform.localPosition.z > 1.75f; }
+    private bool CanPick() { return items.Count > 0 && items[0].transform.localPosition.z > 2.5f; }
 
     public override Item Put(Item item)
     {

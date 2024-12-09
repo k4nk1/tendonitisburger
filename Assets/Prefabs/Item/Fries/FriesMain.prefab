@@ -134,13 +134,45 @@ MonoBehaviour:
   itemName: Fries
   maxStack: 0
   height: 0
+  body: {fileID: 0}
   fryableInfo:
     min: 5
     max: 10
     rawObject: {fileID: 1463413793998307527}
     friedObject: {fileID: 7450371599360902642}
     burnedObject: {fileID: 7850550965493073296}
-  packedObject: {fileID: 5923534657538798075}
+  fryableInfos:
+    m_list:
+    - Key: 2
+      Value:
+        min: 0
+        max: 0
+        rawObject: {fileID: 0}
+        friedObject: {fileID: 0}
+        burnedObject: {fileID: 0}
+    - Key: 1
+      Value:
+        min: 0
+        max: 0
+        rawObject: {fileID: 0}
+        friedObject: {fileID: 0}
+        burnedObject: {fileID: 0}
+    - Key: 0
+      Value:
+        min: 5
+        max: 10
+        rawObject: {fileID: 0}
+        friedObject: {fileID: 0}
+        burnedObject: {fileID: 0}
+  packedObjects:
+    m_list:
+    - Key: 2
+      Value: {fileID: 0}
+    - Key: 1
+      Value: {fileID: 0}
+    - Key: 0
+      Value: {fileID: 0}
+  size: 0
 --- !u!1 &5923534657538798075
 GameObject:
   m_ObjectHideFlags: 0

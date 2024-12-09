@@ -4,6 +4,8 @@ using UnityEngine;
 public class OrderManager : MonoBehaviour
 {
     public List<Order> orders;
+    [SerializeField]
+    private OrderDisplay orderDisplay;
 
     void Start(){
         orders = new List<Order>();
@@ -16,23 +18,19 @@ public class OrderManager : MonoBehaviour
             if(Input.GetKey(KeyCode.H)) order.items.Add(Menus.hamburger);
             if(Input.GetKey(KeyCode.C)) order.items.Add(Menus.cheeseBurger);
             if(Input.GetKey(KeyCode.D)) order.items.Add(Menus.doubleCheeseBurger);
-            if(Input.GetKey(KeyCode.F)) order.items.Add(Menus.fries);
-            if(Input.GetKey(KeyCode.L)) order.items.Add(Menus.cola);
-            orders.Add(order);
-            LogOrders();
+            if(Input.GetKey(KeyCode.F)) order.items.Add(Menus.Fries(Size.S));
+            if(Input.GetKey(KeyCode.L)) order.items.Add(Menus.Beverage(BeverageType.Cola, Size.S));
+            AddOrder(order);
         }
+    }
+
+    void AddOrder(Order order){
+        orders.Add(order);
+        orderDisplay.Add(order);
     }
 
     public void OnOrderMatched(int index){
         orders.RemoveAt(index);
-        LogOrders();
-    }
-
-    private void LogOrders(){
-        string r = "";
-        foreach(Order order in orders){
-            r += string.Join(", ", order.items) + "  |||  ";
-        }
-        Debug.Log(r);
+        orderDisplay.RemoveAt(index);
     }
 }

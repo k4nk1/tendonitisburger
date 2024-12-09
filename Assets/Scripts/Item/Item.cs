@@ -12,12 +12,9 @@ public class Item : MonoBehaviour
     public string itemName;
     public int maxStack;
     public float height;
+    [SerializeField]
     protected GameObject body;
     protected Block parent;
-
-    void Start(){
-        body = transform.Find("Body").gameObject;
-    }
 
     public virtual void SetParent(MonoBehaviour parentObject){
         transform.parent = parentObject.transform;

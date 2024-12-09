@@ -44,6 +44,6 @@ public class Beverage : Item{
 
     public override ItemInfo ToItemInfo()
     {
-        return base.ToItemInfo().AddInfo(size: size, type: type.ToString());
+        return base.ToItemInfo().AddInfo(size: size, type: type.ToString(), state: pourProgress.ToString());
     }
 }

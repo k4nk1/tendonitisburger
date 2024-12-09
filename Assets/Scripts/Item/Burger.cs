@@ -5,9 +5,7 @@ using UnityEngine;
 public class Burger : Bakable{
     List<Item> ingredients;
     [SerializeField]
-    private GameObject RawUpperBun;
-    [SerializeField]
-    private GameObject BakedUpperBun;
+    private GameObject BunUpper;
 
     void Start(){
         ingredients = new List<Item>();
@@ -16,13 +14,14 @@ public class Burger : Bakable{
     public override void Bake()
     {
         base.Bake();
+        BunUpper = body.transform.Find("BunUpper").gameObject;
     }
 
     public void AddIngredient(Item ingredient){
         ingredients.Add(ingredient);
         ingredient.SetParent(this);
         ingredient.transform.localPosition = Vector3.up * height;
-        (BakeProgress == BakeProgress.Raw ? RawUpperBun : BakedUpperBun).transform.localPosition = Vector3.up * height;
+        BunUpper.transform.localPosition = Vector3.up * height;
         height += ingredient.height;
     }
 

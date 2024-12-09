@@ -5,17 +5,19 @@ using UnityEngine;
 public class ItemInfo
 {
     public string name;
+    public string productName;
     public Size? size;
     public string type;
     public string state;
     public List<ItemInfo> innerItems;
 
-    public ItemInfo(string name=null, Size? size=null, string type=null, string state=null, List<ItemInfo> innerItems=null){
-        AddInfo(name: name, size: size, type: type, state: state, innerItems: innerItems);
+    public ItemInfo(string name=null, string productName=null, Size? size=null, string type=null, string state=null, List<ItemInfo> innerItems=null){
+        AddInfo(name: name, productName:productName, size: size, type: type, state: state, innerItems: innerItems);
     }
 
-    public ItemInfo AddInfo(string name=null, Size? size=null, string type=null, string state=null, List<ItemInfo> innerItems=null){
+    public ItemInfo AddInfo(string name=null, string productName=null, Size? size=null, string type=null, string state=null, List<ItemInfo> innerItems=null){
         if(name != null) this.name = name;
+        if(productName != null) this.productName = productName;
         if(size != null) this.size = size;
         if(type != null) this.type = type;
         if(state != null) this.state = state;
