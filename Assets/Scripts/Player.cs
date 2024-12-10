@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
                     inventory.SetParent(this);
                     inventory.transform.localPosition = Vector3.zero;
                 }else if(inventory is Fries && ((Fries)inventory).size != Size.L && block is Storage && ((Storage)block).type is Fries){
-                    if(((Fries)inventory).size == Size.S) ((Fries)inventory).size = Size.M;
-                    else ((Fries)inventory).size = Size.L;
+                    if(((Fries)inventory).size == Size.S) ((Fries)inventory).ChangeSize(Size.M);
+                    else ((Fries)inventory).ChangeSize(Size.L);
                 }else{
                     inventory = block.Put(inventory);
                 }

@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2903907001143334034}
   - component: {fileID: 8321691820912177961}
   m_Layer: 0
-  m_Name: Beverage
+  m_Name: BeverageM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,8 @@ MonoBehaviour:
   itemName: Beverage
   maxStack: 0
   height: 1.9
-  size: 0
+  body: {fileID: 0}
+  size: 1
   surface: {fileID: 4412579676653120871}
   beverageMaterials:
     m_list:

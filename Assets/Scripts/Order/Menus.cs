@@ -17,4 +17,6 @@ public class Menus
     public static ItemInfo Beverage(BeverageType beverageType, Size size){
         return new ItemInfo("Beverage", productName: $"{beverageType.ToString()} {size.ToString()}", size: size, type: beverageType.ToString(), state: "Full");
     }
+
+    public static List<ItemInfo> burgers = new List<ItemInfo>(){hamburger, cheeseBurger, doubleCheeseBurger};
 }

@@ -7,13 +7,13 @@ public class Set : Item{
     public void AddItem(Item item){
         item.SetParent(this);
         items.Add(item);
-        item.transform.localScale = Vector3.one * 0.4f;
+        item.transform.localScale /= 2f;
         SortItems();
     }
 
     public Item PopItem(){
         Item item = items[items.Count-1];
-        item.transform.localScale = Vector3.one * 0.8f;
+        item.transform.localScale *= 2f;
         items.Remove(item);
         SortItems();
         return item;

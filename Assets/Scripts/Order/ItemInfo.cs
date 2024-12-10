@@ -27,8 +27,6 @@ public class ItemInfo
     }
 
     public bool matches(ItemInfo another){
-        Debug.Log($"{name}, {size}, {type}, {state}, {string.Join(", ", innerItems)}");
-        Debug.Log($"{another.name}, {another.size}, {another.type}, {another.state}, {string.Join(", ", another.innerItems)}");
         return name == another.name && size == another.size && type == another.type && state == another.state && CompareLists(innerItems, another.innerItems);
     }
 

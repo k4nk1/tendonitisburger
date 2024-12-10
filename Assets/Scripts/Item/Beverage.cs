@@ -20,6 +20,7 @@ public class Beverage : Item{
     private static Dictionary<Size, float> pouringDurations = new Dictionary<Size, float>{{Size.S, 4}, {Size.M, 6}, {Size.L, 8}};
     [SerializeField]
     private SerializedDictionary<BeverageType, Material> beverageMaterials;
+    public static int noBeverageType = System.Enum.GetNames(typeof(BeverageType)).Length;
     private PourProgress PourProgress{ 
         get{
             if(pourProgress == 0) return PourProgress.Empty;
@@ -31,7 +32,6 @@ public class Beverage : Item{
 
     public bool Pour(BeverageType pourType){
         if(type == BeverageType.Empty){
-            Debug.Log(pourType);
             type = pourType;
             surface.GetComponent<MeshRenderer>().material = beverageMaterials[pourType];
         }
@@ -44,6 +44,6 @@ public class Beverage : Item{
 
     public override ItemInfo ToItemInfo()
     {
-        return base.ToItemInfo().AddInfo(size: size, type: type.ToString(), state: pourProgress.ToString());
+        return base.ToItemInfo().AddInfo(size: size, type: type.ToString(), state: PourProgress.ToString());
     }
 }

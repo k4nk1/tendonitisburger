@@ -16,6 +16,7 @@ public class Order
 
     public bool matches(List<ItemInfo> anotherItems){
         if(items.Count != anotherItems.Count) return false;
+        Debug.Log(string.Join(", ", anotherItems));
         foreach(ItemInfo item in items){
             if(anotherItems.FindIndex(anotheritem => anotheritem.matches(item)) == -1) return false;
         }

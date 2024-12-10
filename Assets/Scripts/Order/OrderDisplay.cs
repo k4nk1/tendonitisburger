@@ -9,7 +9,7 @@ public class OrderDisplay : MonoBehaviour
 
     public void Add(Order order){
         GameObject orderObject = Instantiate(orderPF, transform);
-        orderObject.transform.SetAsFirstSibling();
+        orderObject.transform.SetAsLastSibling();
         orderObject.transform.GetChild(0).GetComponent<TMP_Text>().text = GetDisplayString(order);
     }
 

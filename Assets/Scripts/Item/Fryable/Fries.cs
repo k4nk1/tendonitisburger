@@ -21,6 +21,8 @@ public class Fries : Fryable{
     public void ChangeSize(Size new_size){
         size = new_size;
         fryableInfo = fryableInfos[size];
+        ChangeBody(fryableInfo.rawObject);
+        //ChangeBody(FryProgress == FryProgress.Raw ? fryableInfo.rawObject : FryProgress == FryProgress.Fried ? fryableInfo.friedObject : fryableInfo.burnedObject);
     }
 
     public override ItemInfo ToItemInfo()
