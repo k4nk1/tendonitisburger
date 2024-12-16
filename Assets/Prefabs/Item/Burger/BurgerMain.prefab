@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Burger
   maxStack: 0
-  height: 0.32
+  height: 0.3
   body: {fileID: 9027168144979741602}
   bakableInfo:
     rawObject: {fileID: 9027168144979741602}
@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 8309782085250933588}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -47,11 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Patty
   maxStack: 0
-  height: 0.2
+  height: 0.3
   body: {fileID: 4595723537991746834}
   grillableInfo:
-    min: 5
-    max: 10
+    min: 10
+    max: 30
     rawObject: {fileID: 4595723537991746834}
     grilledObject: {fileID: 7454256179492592559, guid: 28f026c2fa94dd245b514d0233bff6ae, type: 3}
     burnedObject: {fileID: 6044328764920038697, guid: 4fb68fcf3a27b5746aa7a71b6b0fc61a, type: 3}

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum BeverageType{
-    Empty, Cola
+    Empty, Cola, Orange, Coffee
 }
 
 public enum PourProgress{
@@ -17,7 +17,7 @@ public class Beverage : Item{
     [SerializeField]
     private GameObject surface;
     private BeverageType type = BeverageType.Empty;
-    private static Dictionary<Size, float> pouringDurations = new Dictionary<Size, float>{{Size.S, 4}, {Size.M, 6}, {Size.L, 8}};
+    private static Dictionary<Size, float> pouringDurations = new Dictionary<Size, float>{{Size.S, 2}, {Size.M, 3}, {Size.L, 4}};
     [SerializeField]
     private SerializedDictionary<BeverageType, Material> beverageMaterials;
     public static int noBeverageType = System.Enum.GetNames(typeof(BeverageType)).Length;

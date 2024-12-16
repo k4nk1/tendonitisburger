@@ -112,7 +112,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6727193531250429286}
@@ -190,3 +190,7 @@ MonoBehaviour:
     m_list:
     - Key: 1
       Value: {fileID: 2100000, guid: c30ceac2105096a4ab856b46133b19b3, type: 2}
+    - Key: 2
+      Value: {fileID: 2100000, guid: add7b7bed5ab2384694e74f69ab685d4, type: 2}
+    - Key: 3
+      Value: {fileID: 2100000, guid: 0a2aad746c1f2954d9e891726aab337f, type: 2}

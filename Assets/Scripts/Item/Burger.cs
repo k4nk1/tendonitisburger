@@ -21,8 +21,8 @@ public class Burger : Bakable{
         ingredients.Add(ingredient);
         ingredient.SetParent(this);
         ingredient.transform.localPosition = Vector3.up * height;
-        BunUpper.transform.localPosition = Vector3.up * height;
         height += ingredient.height;
+        BunUpper.transform.localPosition = Vector3.up * height;
     }
 
     public override ItemInfo ToItemInfo()

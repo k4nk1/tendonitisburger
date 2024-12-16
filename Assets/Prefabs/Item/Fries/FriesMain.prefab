@@ -59,22 +59,22 @@ MonoBehaviour:
     m_list:
     - Key: 2
       Value:
-        min: 5
-        max: 10
+        min: 10
+        max: 30
         rawObject: {fileID: 3287785486956069031, guid: a3f10b818da31234cb949bf7612418a1, type: 3}
         friedObject: {fileID: 6559798971392628842, guid: 30b59f29cf8c4af4096bbc49e0ff6f60, type: 3}
         burnedObject: {fileID: 7376687723238492609, guid: d4ccaa932ca3a7d42af6e34f3995cce6, type: 3}
     - Key: 1
       Value:
-        min: 5
-        max: 10
+        min: 10
+        max: 30
         rawObject: {fileID: 3765868005612922107, guid: 6d0d528f204c8924f860f709a084b304, type: 3}
         friedObject: {fileID: 6527481768271822714, guid: f0c8acadb0dfeff4c81cf8bcddbba697, type: 3}
         burnedObject: {fileID: 6331990562127623761, guid: c14c642963c6753469caac63e1d398f9, type: 3}
     - Key: 0
       Value:
-        min: 5
-        max: 10
+        min: 10
+        max: 30
         rawObject: {fileID: 792400885039620884, guid: 217ef6e69d8d79a4a9883999bb75c9f4, type: 3}
         friedObject: {fileID: 2503748882041340466, guid: 2f6a1a6b0a214f84cab1897dacba9247, type: 3}
         burnedObject: {fileID: 4885750250052541610, guid: d69820dc231cdfa4095937c5290e5bc7, type: 3}

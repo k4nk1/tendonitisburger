@@ -80,3 +80,6 @@ crashlytics-build.properties
 #Blender backup file
 **/*.blend1
 **/*.blend1.meta
+
+#Build
+WebGL Builds
